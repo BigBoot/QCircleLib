@@ -38,7 +38,7 @@ public class YourActivity extends QCircleActivity{
 <activity
     android:name=".YourActivity"
     android:label="@string/app_name"
-    android:icon="@drawable/app_icon"
+    android:icon="@drawable/app_icon" >
     <intent-filter>
         <action android:name="de.bigboot.qcircleview.qcircleapp" />
     </intent-filter>
