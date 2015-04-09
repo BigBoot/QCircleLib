@@ -46,7 +46,7 @@ public class YourActivity extends QCircleActivity{
 ```
 Your application should appear on QuickView.
 This will automatically fit your view inside the visible circle and add a back button to it.
-If you need more control over this look at [Customizing the view](#Customizing the view)
+If you need more control over this look at [Customizing the view](#customizing-the-view)
 
 ##Customizing the view
 To customize your view, you just need to set the corresponding options before calling Builder.build().
