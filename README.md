@@ -1,4 +1,5 @@
-#QCircleLib
+#QCircleLib [![Release](https://img.shields.io/github/tag/BigBoot/QCircleLib.svg?label=QCircleLib)](https://jitpack.io/#BigBoot/QCircleLib/)
+
 
 QCircleLib allows you to create applications for QuickView, a 3rd party implementation of LG's QuickCircle 
 for the LG G3 QuickCircle case.
@@ -6,11 +7,24 @@ For more information about QuickView visit the
 [XDA-Thread](http://forum.xda-developers.com/showpost.php?p=59892931&postcount=128).
 
 ##Include this library in your Project
-###TODO
+###Step 1. Add the JitPack repository to your build file
+```groovy
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+```
+###Step 2. Add the dependency
+```groovy
+dependencies {
+        compile 'com.github.BigBoot:QCircleLib:v1.0.2'
+	}
+```
 
 ##Using the library
 ###Step 1. Create a new Activity extending QCircleView
-```
+```java
 public class YourActivity extends QCircleActivity{
     @Override
     protected CircleView onCreateView(CircleViewBuilder builder) {
@@ -20,7 +34,7 @@ public class YourActivity extends QCircleActivity{
 ```
 
 ###Step 2. Add a intent-filter to your activity
-```
+```xml
 <activity
     android:name=".YourActivity"
     android:label="@string/app_name"
@@ -37,7 +51,7 @@ If you need more control over this look at [Customizing the view](#Customizing t
 ##Customizing the view
 To customize your view, you just need to set the corresponding options before calling Builder.build().
 For example to disable the back button:
-```
+```java
 @Override
 protected CircleView onCreateView(CircleViewBuilder builder) {
     builder.setShowReturnButton(false);
@@ -46,13 +60,16 @@ protected CircleView onCreateView(CircleViewBuilder builder) {
 ```
 
 To completely disable any screen restrictions and use the full screen:
-```
+```java
 @Override
 protected CircleView onCreateView(CircleViewBuilder builder) {
     builder.setUseMask(false);
     return builder.build(R.layout.your_layout);
 }
 ```
+
+#Javadoc
+The javadoc is available [here](https://jitpack.io/com/github/BigBoot/QCircleLib/v1.0.2/javadoc/)
 
 #License
 ```
